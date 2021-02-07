@@ -10,7 +10,7 @@ class Node: # This is the Class Node with constructor that contains data variabl
 def tree_length(tree):
     if tree is None:
         return 0
-    if tree in not None:
+    if tree is not None:
         left_tree_length = tree_length(tree.left)
         right_tree_length = tree_length(tree.right)
         if right_tree_length > left_tree_length:
