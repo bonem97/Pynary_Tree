@@ -20,3 +20,14 @@ def tree_length(tree):
     else:
         return print("Possible Type Error; Sure You Gave Me A Tree?")
 
+# Recursive function to determine if binary tree is or is not full?
+def fullness(tree):    
+    if tree is None:
+        return True
+    if (tree.left is None) and (tree.right is None):
+        return True
+    if (tree.left is not None) and (tree.right is not None):
+        return (fullness(tree.right) and fullness(tree.left))
+    else:
+        return False
+
