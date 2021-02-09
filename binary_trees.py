@@ -31,3 +31,18 @@ def fullness(tree):
     else:
         return False
 
+# Build tree to test the functions!
+# 1 denotes left while 2 denotes right
+tree = Node(1)
+tree.left = Node(11)
+tree.right = Node(12)
+tree.left.left = Node(111)
+tree.left.right = Node(112)
+tree.left.right.left = Node(1121)
+tree.right.left = Node(121)
+tree.right.left.left = Node(1211)
+tree.right.left.left.right = Node(12112)
+tree.right.left.left.left = Node(12111)
+
+print(f'Is tree full?  {fullness(tree)}')
+print(f'How long is the tree?  {tree_length(tree)}')
