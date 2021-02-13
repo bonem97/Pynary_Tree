@@ -31,6 +31,15 @@ def fullness(tree):
     else:
         return False
 
+def PrintTree(self):
+    if tree is None:
+        print("Ø")
+    if self.left:
+        self.left.PrintTree()
+        print(self.data),
+    if self.right:
+        self.right.PrintTree()
+
 # Build tree to test the functions!
 # 1 denotes left while 2 denotes right
 tree = Node(1)
@@ -46,3 +55,4 @@ tree.right.left.left.left = Node(12111)
 
 print(f'Is tree full?  {fullness(tree)}')
 print(f'How long is the tree?  {tree_length(tree)}')
+print(f'Tree in printed form: {PrintTree(tree)}')
